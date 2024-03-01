@@ -1,7 +1,8 @@
 :root {
   --color-yellow: #ffcc4a;
   --color-green: #4eaf4e;
-  --color-dark: #151515;
+  --color-black: #151515;
+  --color-dark: rgba(27, 27, 27, 0.91);
   --color-gray: #ebebeb;
   --color-white: #fff;
 }
@@ -14,13 +15,20 @@ body,
   font-family: lato;
 }
 
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
 }
 
 .header {
-  background: rgba(27, 27, 27, 0.91);
+  background-color: var(--color-dark);
   padding: 40px 0;
 }
 .header__row {
@@ -29,14 +37,6 @@ body,
   align-items: center;
   flex-wrap: wrap;
   row-gap: 20px;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
 }
 
 .heading {
@@ -118,16 +118,25 @@ ul {
   width: 20%;
 }
 
+.advantages {
+  position: relative;
+  top: -120px;
+}
+
 .advantages__row {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.advantages__card {
+.advantages-card {
   border-radius: 20px;
+  padding: 48px;
   padding-top: 237px;
   max-width: 388px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .advantages__heading {
@@ -142,4 +151,72 @@ ul {
 .advantages__link {
   padding: 16px 31px;
   border-radius: 55px;
+  display: inline-block;
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.advantages__card-services {
+  background-image: url(img/Card1.png);
+}
+
+.advantages__card-approach {
+  background-image: url(img/Card2.png);
+}
+
+.advantages__card-solution {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.advantages__link_white {
+  background-color: var(--color-white);
+}
+
+.advantages__link_black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.advantages-card__icons {
+  transform: rotate(-15deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.advantages-card__icon-1 {
+  /* border: 2px solid red; */
+  transform: rotate(15deg) translate(50px, 70px);
+}
+
+.advantages-card__icon-2 {
+  /* border: 2px solid red; */
+  transform: rotate(15deg) translate(210px, 30px);
+}
+
+.advantages-card__icon-3 {
+  /* border: 2px solid red; */
+  transform: rotate(-15deg) translate(0px, 20px);
+}
+
+.advantages-card__icon-4 {
+  /* border: 2px solid red; */
+  transform: rotate(15deg) translate(40px, -20px);
+}
+
+.advantages-card__icon-5 {
+  /* border: 2px solid red; */
+  transform: rotate(15deg) translate(-50px, 140px);
+}
+
+.advantages-card__icon-6 {
+  /* border: 2px solid red; */
+  transform: rotate(20deg) translate(-5px, 155px);
+}
+
+.advantages-card__icon-7 {
+  /* border: 2px solid red; */
+  transform: rotate(30deg) translate(0px, -140px);
+  scale: 0.7;
 }
